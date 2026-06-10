@@ -31,7 +31,7 @@
         .hero { background: var(--gradient-hero); padding: 10px; position: relative; overflow: hidden; border-bottom: 1px solid var(--border-subtle); }
         .hero::after { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background: radial-gradient(circle at 30% 70%, rgba(74,158,255,0.06) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(0,212,170,0.04) 0%, transparent 50%); pointer-events:none; }
         .hero-layout { position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:48px; max-width:1000px; margin:0 auto; }
-        .hero-side-img { flex-shrink:0; width:200px; max-height:300px; border-radius:16px; object-fit:cover; border:2px solid rgba(74,158,255,0.2); box-shadow:0 8px 32px rgba(0,0,0,0.4); opacity:0.85; cursor:zoom-in; transition:opacity 0.3s, transform 0.3s; }
+        .hero-side-img { flex-shrink:0; width:200px; max-height:300px; border-radius:16px; object-fit:cover; border:2px solid rgba(74,158,255,0.2); box-shadow:0 8px 32px rgba(0,0,0,0.4); opacity:0.85; cursor:zoom-in; transition:opacity 0.3s, transform 0.3s; background:rgba(74,158,255,0.06); }
         .hero-text { text-align:center; flex:1; min-width:0; position:relative; z-index:2; }
         .hero-text h1 { font-size:2.4rem; font-weight:700; margin-bottom:8px; letter-spacing:-0.02em; background:var(--gradient-accent); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
         .hero-text .subtitle { font-size:1.15rem; color:var(--text-secondary); margin-bottom:6px; }
@@ -208,7 +208,7 @@
 <!-- Language Switch -->
 <div class="lang-switch">
     <div class="lang-toggle">
-        <a href="index.html">🇨🇳</a>
+        <a href="/">🇨🇳</a>
         <a href="index.en.html" class="active">🇺🇸</a>
     </div>
     <span class="lang-label" id="browser-lang"></span>
@@ -217,14 +217,14 @@
 <!-- Hero -->
 <header class="hero">
     <div class="hero-layout">
-        <img class="hero-side-img" src="images/profile.jpg?t=1780910447" alt="Profile" fetchpriority="high" onclick="openLightbox(this)">
+        <img class="hero-side-img" data-src="images/profile.webp?t=1780910447" alt="Profile" onclick="openLightbox(this)">
         <div class="hero-text">
             <h1>Jaden Li</h1>
             <p class="subtitle">Solution Architect</p>
             <p class="company">Cloudwise (Beijing) Technology Co., Ltd.</p>
             <p class="period">Jul 2020 — Jun 2026 · 6 Years</p>
         </div>
-        <img class="hero-side-img" src="images/portrait.jpg?t=1780910447" alt="Portrait" fetchpriority="high" onclick="openLightbox(this)">
+        <img class="hero-side-img" data-src="images/portrait.webp?t=1780910447" alt="Portrait" onclick="openLightbox(this)">
     </div>
 </header>
 
@@ -299,7 +299,7 @@
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2024-12-best-solution-award.png?t=1780910447" alt="Best Solution Award Dec 2024" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2024-12-best-solution-award.webp?t=1780910447" alt="Best Solution Award Dec 2024" loading="lazy" onclick="openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -319,7 +319,7 @@
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2024-09-best-solution-award.png?t=1780910447" alt="Best Solution Award Sep 2024" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2024-09-best-solution-award.webp?t=1780910447" alt="Best Solution Award Sep 2024" loading="lazy" onclick="openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -339,7 +339,7 @@
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2024-08-outstanding-contribution-award.png?t=1780910447" alt="Outstanding Contribution Award Aug 2024" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2024-08-outstanding-contribution-award.webp?t=1780910447" alt="Outstanding Contribution Award Aug 2024" loading="lazy" onclick="openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -360,8 +360,8 @@
                     </div>
                     <div class="card-image">
                         <table class="img-table"><tr>
-                            <td><img class="thumb" src="images/2023-04-nightclass-01.jpg?t=1780910447" alt="Late Night Classroom 01" loading="lazy" onclick="openLightbox(this)"></td>
-                            <td><img class="thumb" src="images/2023-04-nightclass-02.jpg?t=1780910447" alt="Late Night Classroom 02" loading="lazy" onclick="openLightbox(this)"></td>
+                            <td><img class="thumb" src="images/2023-04-nightclass-01.webp?t=1780910447" alt="Late Night Classroom 01" loading="lazy" onclick="openLightbox(this)"></td>
+                            <td><img class="thumb" src="images/2023-04-nightclass-02.webp?t=1780910447" alt="Late Night Classroom 02" loading="lazy" onclick="openLightbox(this)"></td>
                         </tr></table>
                     </div>
                 </div>
@@ -382,7 +382,7 @@
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2023-09-solution-award.jpg?t=1780910447" alt="Outstanding Solution Contribution" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2023-09-solution-award.webp?t=1780910447" alt="Outstanding Solution Contribution" loading="lazy" onclick="openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -402,7 +402,7 @@
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2022-q4-service-star.jpg?t=1780910447" alt="Customer Service Star" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2022-q4-service-star.webp?t=1780910447" alt="Customer Service Star" loading="lazy" onclick="openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -422,7 +422,7 @@
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2022-11-outstanding-cloudwiser.jpg?t=1780910447" alt="Outstanding Cloudwiser" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2022-11-outstanding-cloudwiser.webp?t=1780910447" alt="Outstanding Cloudwiser" loading="lazy" onclick="openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -442,7 +442,7 @@
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2022-10-digital-contribution.jpg?t=1780910447" alt="Digital Transformation Contribution" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2022-10-digital-contribution.webp?t=1780910447" alt="Digital Transformation Contribution" loading="lazy" onclick="openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -462,7 +462,7 @@
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2022-06-colleague-thanks.png?t=1780910447" alt="Presales Teammate Thank-You Letter" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2022-06-colleague-thanks.webp?t=1780910447" alt="Presales Teammate Thank-You Letter" loading="lazy" onclick="openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -482,7 +482,7 @@
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2021-courage-award.jpg?t=1780910447" alt="Courage to Take Ownership Award" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2021-courage-award.webp?t=1780910447" alt="Courage to Take Ownership Award" loading="lazy" onclick="openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -502,7 +502,7 @@
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2021-11-cloudwise-opensource-day6.png?t=1780910447" alt="Cloudwise Open Source Day #6" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2021-11-cloudwise-opensource-day6.webp?t=1780910447" alt="Cloudwise Open Source Day #6" loading="lazy" onclick="openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -523,9 +523,9 @@
                     </div>
                     <div class="card-image">
                         <table class="img-table"><tr>
-                            <td><img class="thumb" src="images/2020-12-east-team-01.jpg?t=1780910447" alt="East China Team 01" loading="lazy" onclick="openLightbox(this)"></td>
-                            <td><img class="thumb" src="images/2020-12-east-team-02.jpg?t=1780910447" alt="East China Team 02" loading="lazy" onclick="openLightbox(this)"></td>
-                            <td><img class="thumb" src="images/2020-12-east-team-03.jpg?t=1780910447" alt="East China Team 03" loading="lazy" onclick="openLightbox(this)"></td>
+                            <td><img class="thumb" src="images/2020-12-east-team-01.webp?t=1780910447" alt="East China Team 01" loading="lazy" onclick="openLightbox(this)"></td>
+                            <td><img class="thumb" src="images/2020-12-east-team-02.webp?t=1780910447" alt="East China Team 02" loading="lazy" onclick="openLightbox(this)"></td>
+                            <td><img class="thumb" src="images/2020-12-east-team-03.webp?t=1780910447" alt="East China Team 03" loading="lazy" onclick="openLightbox(this)"></td>
                         </tr></table>
                     </div>
                 </div>
@@ -685,6 +685,14 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
     },{threshold:0.15});
     items.forEach(i=>io.observe(i));
 })();
+
+/* #6 Hero images: load after page ready */
+window.addEventListener('load',function(){
+    document.querySelectorAll('.hero-side-img[data-src]').forEach(function(img){
+        img.src=img.dataset.src;
+        img.removeAttribute('data-src');
+    });
+});
 </script>
 </body>
 </html>
