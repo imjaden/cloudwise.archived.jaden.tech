@@ -14,7 +14,7 @@
         html { scroll-behavior: smooth; }
         :root {
             --bg-deep: #0A0A2A; --bg-card: #111138;
-            --text-primary: #e8e8f8; --text-secondary: #8888bb; --text-muted: #5555aa;
+            --text-primary: #e8e8f8; --text-secondary: #8888bb; --text-muted: #7777bb;
             --accent-blue: #4A9EFF; --accent-cyan: #00D4AA; --accent-gold: #FFB400; --accent-red: #FF6B6B;
             --gradient-hero: linear-gradient(135deg, #0A0A2A 0%, #12123e 40%, #1a1a50 100%);
             --gradient-accent: linear-gradient(135deg, #4A9EFF, #00D4AA);
@@ -115,7 +115,7 @@
         .cta-bar a { display:inline-flex; align-items:center; justify-content:center; padding:12px 28px; min-height:48px; border-radius:10px; font-size:0.95rem; font-weight:600; text-decoration:none; transition:all 0.25s; }
         .cta-primary { background:var(--gradient-accent); color:#fff; box-shadow:0 4px 16px rgba(74,158,255,0.25); }
         .cta-secondary { background:transparent; color:var(--accent-blue); border:1px solid var(--border-card); }
-        .footer { text-align:center; padding:32px 24px; color:var(--text-muted); font-size:0.82rem; border-top:1px solid var(--border-subtle); }
+        .footer { text-align:center; color:var(--text-muted); font-size:0.82rem; border-top:1px solid var(--border-subtle); }
         .footer a { color:var(--accent-blue); text-decoration:none; }
         .generator { margin-top:12px; display:flex; align-items:center; justify-content:center; gap:10px; font-size:0.72rem; color:lightgray; }
         .generator .pipe { display:flex; align-items:center; gap:8px; }
@@ -134,7 +134,6 @@
             .card-badge{display:none}
             .date-icon{display:inline-block;margin-right:6px}
             .img-table{border-spacing:4px 0}
-            .date-icon{display:inline-block;}
         }
 
         /* Hover effects — only on devices that support hover */
@@ -160,6 +159,9 @@
         .lang-toggle a.active { background:var(--gradient-accent); color:#fff; }
         .lang-toggle a:hover:not(.active) { color:var(--text-primary); background:rgba(74,158,255,0.08); }
         .lang-label { font-size:0.7rem; color:var(--text-muted); white-space:nowrap; }
+
+        /* Agent Flow Diagram */
+        .agent-flow { max-width:480px; width:100%; height:auto; margin:0 auto; display:block; }
         @media (max-width:768px) {
             .lang-switch { top:10px; right:10px; padding:4px 12px 4px 4px; gap:8px; }
             .lang-toggle a { padding:4px 12px; font-size:0.72rem; }
@@ -208,8 +210,8 @@
 <!-- Language Switch -->
 <div class="lang-switch">
     <div class="lang-toggle">
-        <a href="/" class="active">🇨🇳</a>
-        <a href="index.en.html">🇺🇸</a>
+        <a href="index.html" class="active" aria-label="中文">🇨🇳</a>
+                <a href="index.en.html" aria-label="English">🇺🇸</a>
     </div>
     <span class="lang-label" id="browser-lang"></span>
 </div>
@@ -217,14 +219,14 @@
 <!-- Hero -->
 <header class="hero">
     <div class="hero-layout">
-        <img class="hero-side-img" src="images/profile.webp?t=1780910447" fetchpriority="high" alt="Profile" onclick="openLightbox(this)">
+        <img class="hero-side-img" src="images/profile.webp?t=1780910447" fetchpriority="high" alt="Profile" width="200" height="300" onclick="openLightbox(this)">
         <div class="hero-text">
             <h1>李俊杰 Jaden Li</h1>
             <p class="subtitle">解决方案架构师 · Solution Architect</p>
             <p class="company">云智慧（北京）科技有限公司 Cloudwise</p>
             <p class="period">2020年7月 - 2026年6月 · 6年</p>
         </div>
-        <img class="hero-side-img" src="images/portrait.webp?t=1780910447" fetchpriority="high" alt="Portrait" onclick="openLightbox(this)">
+        <img class="hero-side-img" src="images/portrait.webp?t=1780910447" fetchpriority="high" alt="Portrait" width="200" height="300" onclick="openLightbox(this)">
     </div>
 </header>
 
@@ -575,7 +577,7 @@
 </main>
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
     <img id="lightbox-img" src="" alt="">
 </div>
 
@@ -584,59 +586,43 @@
     <a href="https://cloudwise.com" class="cta-secondary">了解云智慧</a>
 </div>
 
-<footer class="footer">
-    <p style="margin-top:8px;">本页面内容基于公司邮件、表彰通知、培训记录整理 · 荣誉截图原件由本人留存</p>
-    <div class="generator">
-        <span class="pipe">
-            <span class="agent">
-                <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M60 10 C30 10 15 35 15 55 C15 75 30 95 45 100 L45 110 L55 110 L55 100 C55 100 60 102 65 100 L65 110 L75 110 L75 100 C90 95 105 75 105 55 C105 35 90 10 60 10Z" fill="#ff4d4d" opacity="0.6"/>
-                  <circle cx="45" cy="35" r="5" fill="#0A0A2A"/><circle cx="75" cy="35" r="5" fill="#0A0A2A"/>
-                  <circle cx="46" cy="34" r="2" fill="#00e5cc"/><circle cx="76" cy="34" r="2" fill="#00e5cc"/>
-                </svg>
-                OpenClaw
-            </span>
-            <span class="sep">生成</span>
-        </span>
-        <span class="sep">·</span>
-        <span class="pipe">
-            <span class="agent">
-                <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <!-- Rounded square frame -->
-                  <rect x="4" y="4" width="112" height="112" rx="24" fill="#0A0A2A" stroke="#8888bb" stroke-width="3"/>
-                  <!-- Hair - bob cut, wide, fills upper frame -->
-                  <path d="M22 62 C22 32 38 18 60 16 C82 18 98 32 98 62 L98 56 C98 44 90 36 82 32 L80 46 C80 34 72 28 60 26 C48 28 40 34 40 46 L38 32 C30 36 22 44 22 56 Z" fill="#e8e8f8"/>
-                  <!-- Forehead stripe -->
-                  <rect x="38" y="44" width="44" height="4" rx="2" fill="#5555aa" opacity="0.7"/>
-                  <!-- Left eye -->
-                  <circle cx="48" cy="58" r="4.5" fill="#0A0A2A"/>
-                  <!-- Right eye -->
-                  <circle cx="72" cy="58" r="4.5" fill="#0A0A2A"/>
-                  <!-- Nose -->
-                  <line x1="60" y1="64" x2="58" y2="72" stroke="#5555aa" stroke-width="1.8" stroke-linecap="round"/>
-                  <!-- Mouth -->
-                  <path d="M52 78 Q60 84 68 78" stroke="#5555aa" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-                  <!-- Neck & shoulders hint -->
-                  <path d="M48 90 L48 100 Q60 112 72 100 L72 90" stroke="#8888bb" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
-                </svg>
-                Hermes
-            </span>
-            <span class="sep">评审</span>
-        </span>
-        <span class="sep">·</span>
-        <span class="pipe">
-            <span class="agent">
-                <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="60" cy="60" r="50" fill="#0A0A2A" stroke="#4A9EFF" stroke-width="3"/>
-                  <circle cx="60" cy="60" r="35" fill="none" stroke="#00D4AA" stroke-width="2" stroke-dasharray="8 4"/>
-                  <path d="M40 60 L55 45 L80 60 L55 75 Z" fill="#4A9EFF"/>
-                  <circle cx="60" cy="60" r="8" fill="#00D4AA"/>
-                </svg>
-                TRAE
-            </span>
-            <span class="sep">微调</span>
-        </span>
-    </div>
+<!-- Agent Flow Diagram -->
+<footer class="footer" style="padding-top:0;">
+    <svg class="agent-flow" viewBox="0 0 620 200" role="img" aria-label="Agent 协作流程图" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <marker id="ah-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#4A9EFF"/></marker>
+            <marker id="ah-cyan" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#00D4AA"/></marker>
+            <marker id="ah-gold" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#FFB400"/></marker>
+        </defs>
+
+        <!-- Top: TRAE → Hermes (counterclockwise, upper U) — cyan -->
+        <path d="M440,80 L440,68 L280,68 L280,80" stroke="#00D4AA" stroke-width="1.5" fill="none" marker-end="url(#ah-cyan)"/>
+
+        <!-- Bottom: Hermes → TRAE (counterclockwise, lower U) — blue -->
+        <path d="M280,100 L280,118 L440,118 L440,100" stroke="#4A9EFF" stroke-width="1.5" fill="none" marker-end="url(#ah-blue)"/>
+
+        <!-- OpenClaw ↔ Hermes (U below, no arrow) — gold -->
+        <path d="M120,100 L120,118 L280,118 L280,100" stroke="#FFB400" stroke-width="1.5" fill="none"/>
+
+        <!-- Nested U between the two bottom U-lines, arrow pointing right — gold -->
+        <path d="M200,118 L200,136 L360,136 L360,118" stroke="#FFB400" stroke-width="1.5" fill="none" marker-end="url(#ah-gold)"/>
+
+        <!-- Nodes & Labels -->
+        <!-- OpenClaw -->
+        <circle cx="120" cy="90" r="10" fill="#0A0A2A" stroke="#FFB400" stroke-width="2"/>
+        <text x="120" y="112" text-anchor="middle" fill="#FFB400" font-size="12" font-weight="600">OpenClaw</text>
+        <text x="200" y="110" text-anchor="middle" fill="#5555aa" font-size="12">生成</text>
+
+        <!-- Hermes -->
+        <circle cx="280" cy="90" r="10" fill="#0A0A2A" stroke="#4A9EFF" stroke-width="2"/>
+        <text x="280" y="112" text-anchor="middle" fill="#e8e8f8" font-size="12" font-weight="600">Hermes</text>
+        <text x="360" y="110" text-anchor="middle" fill="#5555aa" font-size="12">评审</text>
+
+        <!-- TRAE -->
+        <circle cx="440" cy="90" r="10" fill="#0A0A2A" stroke="#00D4AA" stroke-width="2"/>
+        <text x="440" y="112" text-anchor="middle" fill="#00D4AA" font-size="12" font-weight="600">TRAE</text>
+        <text x="360" y="60" text-anchor="middle" fill="#5555aa" font-size="12">微调</text>
+    </svg>
 </footer>
 
 <script>
@@ -686,8 +672,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
     },{threshold:0.15});
     items.forEach(i=>io.observe(i));
 })();
-
-
 </script>
 </body>
 </html>
