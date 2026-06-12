@@ -117,11 +117,7 @@
         .cta-secondary { background:transparent; color:var(--accent-blue); border:1px solid var(--border-card); }
         .footer { text-align:center; padding:32px 24px; color:var(--text-muted); font-size:0.82rem; border-top:1px solid var(--border-subtle); }
         .footer a { color:var(--accent-blue); text-decoration:none; }
-        .generator { margin-top:12px; display:flex; align-items:center; justify-content:center; gap:10px; font-size:0.72rem; color:lightgray; }
-        .generator .pipe { display:flex; align-items:center; gap:8px; }
-        .generator .agent { display:inline-flex; align-items:center; gap:4px; opacity:0.8; transition:opacity 0.3s; }
-        .generator .agent svg { width:14px; height:14px; flex-shrink:0; }
-        .generator .sep { font-size:0.6rem; } /* color:#2a2a5a; */
+
 
         @media (max-width:768px) {
             .hero{padding:48px 16px 36px} .hero-layout{flex-direction:column;gap:24px}
@@ -134,7 +130,6 @@
             .card-badge{display:none}
             .date-icon{display:inline-block;margin-right:6px}
             .img-table{border-spacing:4px 0}
-            .date-icon{display:inline-block;}
         }
 
         /* Hover effects — only on devices that support hover */
@@ -150,7 +145,6 @@
             .cta-primary:hover { transform:translateY(-2px); box-shadow:0 6px 24px rgba(74,158,255,0.35); }
             .cta-secondary:hover { border-color:var(--accent-blue); background:rgba(74,158,255,0.06); }
             .footer a:hover { text-decoration:underline; }
-            .generator .agent:hover { opacity:1; }
         }
 
         /* Language Switch */
@@ -159,7 +153,7 @@
         .lang-toggle a { display:inline-block; padding:5px 16px; font-size:0.78rem; font-weight:600; text-decoration:none; color:var(--text-secondary); transition:all 0.2s; line-height:1.4; }
         .lang-toggle a.active { background:var(--gradient-accent); color:#fff; }
         .lang-toggle a:hover:not(.active) { color:var(--text-primary); background:rgba(74,158,255,0.08); }
-        .lang-label { font-size:0.7rem; color:var(--text-muted); white-space:nowrap; }
+        .lang-label { font-size:0.7rem; color:var(--text-muted); white-space:nowrap; display:none; }
 
         /* Agent Flow Diagram */
         .agent-flow { max-width:480px; width:100%; height:auto; margin:0 auto; display:block; }
@@ -220,14 +214,14 @@
 <!-- Hero -->
 <header class="hero">
     <div class="hero-layout">
-        <img class="hero-side-img" src="images/profile.webp?t=1780910447" fetchpriority="high" alt="Profile" width="200" height="300" onclick="openLightbox(this)">
+        <img class="hero-side-img" src="images/profile.webp?t=1780910447" fetchpriority="high" alt="Jaden Li profile photo" width="200" height="300" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
         <div class="hero-text">
             <h1>Jaden Li</h1>
             <p class="subtitle">Solution Architect</p>
             <p class="company">Cloudwise (Beijing) Technology Co., Ltd.</p>
             <p class="period">Jul 2020 - Jun 2026 · 6 Years</p>
         </div>
-        <img class="hero-side-img" src="images/portrait.webp?t=1780910447" fetchpriority="high" alt="Portrait" width="200" height="300" onclick="openLightbox(this)">
+        <img class="hero-side-img" src="images/portrait.webp?t=1780910447" fetchpriority="high" alt="Jaden Li portrait" width="200" height="300" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
     </div>
 </header>
 
@@ -278,11 +272,11 @@
                             <div class="card-title">"Smart Wuxi, Connected Globe" Industry Summit</div>
                             <div class="card-desc">Invited as a keynote speaker at the "Smart Wuxi, Connected Globe" summit - shared hands-on experience and forward-looking insights on AIOps and digital transformation.</div>
                             <span class="card-tag tag-event">Industry Summit · Keynote</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Photo</button>
+                            <button class="toggle-img" aria-label="View Photo" aria-expanded="false" onclick="toggleImg(this)"><span class="arrow">▶</span> View Photo</button>
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2025-09-wuxi-summit-speaker.webp?t=1780910447" alt="Wuxi Summit Keynote" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2025-09-wuxi-summit-speaker.webp?t=1780910447" alt="Wuxi Summit Keynote" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -298,11 +292,11 @@
                             <div class="card-title">Best Solution Award</div>
                             <div class="card-desc">Balanced presales work with multiple project deliveries at the same time, worked with the Iron Triangle team to hit milestones, and helped push contracts and payments across the finish line.</div>
                             <span class="card-tag tag-award">Company Award</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
+                            <button class="toggle-img" aria-label="View Certificate" aria-expanded="false" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2024-12-best-solution-award.webp?t=1780910447" alt="Best Solution Award Dec 2024" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2024-12-best-solution-award.webp?t=1780910447" alt="Best Solution Award Dec 2024" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -318,11 +312,11 @@
                             <div class="card-title">Best Solution Award</div>
                             <div class="card-desc">Built reusable solution frameworks for the telco vertical by following through on algorithm integration, while juggling multiple project milestones to speed up contract closure and payment collection.</div>
                             <span class="card-tag tag-award">Company Award</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
+                            <button class="toggle-img" aria-label="View Certificate" aria-expanded="false" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2024-09-best-solution-award.webp?t=1780910447" alt="Best Solution Award Sep 2024" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2024-09-best-solution-award.webp?t=1780910447" alt="Best Solution Award Sep 2024" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -338,11 +332,11 @@
                             <div class="card-title">Outstanding Contribution Award</div>
                             <div class="card-desc">Coordinated resources across R&D and algorithm teams, went on-site with the client for scenario testing and tuning, and packaged up a reusable telco algorithm solution playbook for the team.</div>
                             <span class="card-tag tag-special">Company Award</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
+                            <button class="toggle-img" aria-label="View Certificate" aria-expanded="false" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2024-08-outstanding-contribution-award.webp?t=1780910447" alt="Outstanding Contribution Award Aug 2024" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2024-08-outstanding-contribution-award.webp?t=1780910447" alt="Outstanding Contribution Award Aug 2024" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -358,13 +352,13 @@
                             <div class="card-title">"Late Night Classroom" Talk</div>
                             <div class="card-desc">Gave a deep-dive talk on the internal knowledge-sharing platform titled "A Quick Take on Building Digital O&M for Manufacturing" - walked through practical experience and methodology for going digital in factory ops.</div>
                             <span class="card-tag tag-sharing">Knowledge Sharing</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Photos</button>
+                            <button class="toggle-img" aria-label="View Photos" aria-expanded="false" onclick="toggleImg(this)"><span class="arrow">▶</span> View Photos</button>
                         </div>
                     </div>
                     <div class="card-image">
                         <table class="img-table"><tr>
-                            <td><img class="thumb" src="images/2023-04-nightclass-01.webp?t=1780910447" alt="Late Night Classroom 01" loading="lazy" onclick="openLightbox(this)"></td>
-                            <td><img class="thumb" src="images/2023-04-nightclass-02.webp?t=1780910447" alt="Late Night Classroom 02" loading="lazy" onclick="openLightbox(this)"></td>
+                            <td><img class="thumb" src="images/2023-04-nightclass-01.webp?t=1780910447" alt="Late Night Classroom 01" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)"></td>
+                            <td><img class="thumb" src="images/2023-04-nightclass-02.webp?t=1780910447" alt="Late Night Classroom 02" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)"></td>
                         </tr></table>
                     </div>
                 </div>
@@ -381,11 +375,11 @@
                             <div class="card-title">Outstanding Solution Contribution</div>
                             <div class="card-desc">Recognized for standout solution design and delivery. Led solution development across civil aviation, telecom, and other industries.</div>
                             <span class="card-tag tag-award">Company Award</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
+                            <button class="toggle-img" aria-label="View Certificate" aria-expanded="false" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2023-09-solution-award.webp?t=1780910447" alt="Outstanding Solution Contribution" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2023-09-solution-award.webp?t=1780910447" alt="Outstanding Solution Contribution" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -401,11 +395,11 @@
                             <div class="card-title">Customer Service Star of the Year</div>
                             <div class="card-desc">Named both quarterly and annual "Customer Service Star" on the solutions team - recognized for going above and beyond on client satisfaction.</div>
                             <span class="card-tag tag-award">Quarterly & Annual Star</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
+                            <button class="toggle-img" aria-label="View Certificate" aria-expanded="false" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2022-q4-service-star.webp?t=1780910447" alt="Customer Service Star" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2022-q4-service-star.webp?t=1780910447" alt="Customer Service Star" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -421,11 +415,11 @@
                             <div class="card-title">"Outstanding Cloudwiser"</div>
                             <div class="card-desc">Awarded the annual "Outstanding Cloudwiser" title - recognized for excellence in technical expertise, teamwork, and delivering real value to clients.</div>
                             <span class="card-tag tag-special">Annual Honor</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
+                            <button class="toggle-img" aria-label="View Certificate" aria-expanded="false" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2022-11-outstanding-cloudwiser.webp?t=1780910447" alt="Outstanding Cloudwiser" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2022-11-outstanding-cloudwiser.webp?t=1780910447" alt="Outstanding Cloudwiser" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -441,11 +435,11 @@
                             <div class="card-title">Digital Transformation Contribution Award</div>
                             <div class="card-desc">Recognized for driving enterprise digital transformation forward. Led solution design and tech consulting across multiple digitalization projects.</div>
                             <span class="card-tag tag-award">Company Award</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
+                            <button class="toggle-img" aria-label="View Certificate" aria-expanded="false" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2022-10-digital-contribution.webp?t=1780910447" alt="Digital Transformation Contribution" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2022-10-digital-contribution.webp?t=1780910447" alt="Digital Transformation Contribution" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -461,11 +455,11 @@
                             <div class="card-title">Thank-You Letter from Presales Teammate</div>
                             <div class="card-desc">Received a written thank-you from the field team for outstanding project support. On the Zhuhai HR Bank O&M Monitoring Platform Phase 2 project, delivered detailed responses on log tracing, root cause analysis, and alert noise reduction - earned a formal thank-you from the client.</div>
                             <span class="card-tag tag-letter">Thank-You Letter · Client Recognition</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Letter</button>
+                            <button class="toggle-img" aria-label="View Letter" aria-expanded="false" onclick="toggleImg(this)"><span class="arrow">▶</span> View Letter</button>
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2022-06-colleague-thanks.webp?t=1780910447" alt="Presales Teammate Thank-You Letter" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2022-06-colleague-thanks.webp?t=1780910447" alt="Presales Teammate Thank-You Letter" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -481,11 +475,11 @@
                             <div class="card-title">"Courage to Take Ownership" Award</div>
                             <div class="card-desc">Named on the 2021 Sales & Presales "Courage to Take Ownership" award list - recognized for stepping up, taking on tough challenges, and delivering in presales.</div>
                             <span class="card-tag tag-award">Company Award</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
+                            <button class="toggle-img" aria-label="View Certificate" aria-expanded="false" onclick="toggleImg(this)"><span class="arrow">▶</span> View Certificate</button>
                         </div>
                     </div>
                     <div class="card-image">
-                        <img class="thumb" src="images/2021-courage-award.webp?t=1780910447" alt="Courage to Take Ownership Award" loading="lazy" onclick="openLightbox(this)">
+                        <img class="thumb" src="images/2021-courage-award.webp?t=1780910447" alt="Courage to Take Ownership Award" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this)" onkeydown="if(event.key==='Enter')openLightbox(this)">
                     </div>
                 </div>
             </div>
@@ -501,179 +495,6 @@
                             <div class="card-title">Cloudwise Open Source Day #6 - Live Talk<span class="title-badge">Episode 6</span></div>
                             <div class="card-desc">Gave a livestream talk as Solution Architect on "Thoughts on Data Architecture Evolution Based on ClickHouse" - covered the big data architecture journey, ClickHouse adoption status, lakehouse architecture thinking, and bringing outside innovation in-house.</div>
                             <span class="card-tag tag-event">Tech Talk · Livestream</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Poster</button>
+                            <button class="toggle-img" aria-label="View Poster" aria-expanded="false" onclick="toggleImg(this)"><span class="arrow">▶</span> View Poster</button>
                         </div>
                     </div>
-                    <div class="card-image">
-                        <img class="thumb" src="images/2021-11-cloudwise-opensource-day6.webp?t=1780910447" alt="Cloudwise Open Source Day #6" loading="lazy" onclick="openLightbox(this)">
-                    </div>
-                </div>
-            </div>
-
-            <!-- 14. East China Solutions Team Build 2020.12 -->
-            <div class="timeline-item highlight">
-                <div class="timeline-dot"></div>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-badge badge-team">👥</div>
-                        <div class="card-info">
-                            <div class="card-date"><span class="date-icon">👥</span>Dec 2020</div>
-                            <div class="card-title">East China Solutions Team - Founding Member</div>
-                            <div class="card-desc">Joined as an early core member to build out the East China solutions team from scratch - laid the groundwork for the region's business growth.</div>
-                            <span class="card-tag tag-team">Team Building</span>
-                            <button class="toggle-img" onclick="toggleImg(this)"><span class="arrow">▶</span> View Photos</button>
-                        </div>
-                    </div>
-                    <div class="card-image">
-                        <table class="img-table"><tr>
-                            <td><img class="thumb" src="images/2020-12-east-team-01.webp?t=1780910447" alt="East China Team 01" loading="lazy" onclick="openLightbox(this)"></td>
-                            <td><img class="thumb" src="images/2020-12-east-team-02.webp?t=1780910447" alt="East China Team 02" loading="lazy" onclick="openLightbox(this)"></td>
-                            <td><img class="thumb" src="images/2020-12-east-team-03.webp?t=1780910447" alt="East China Team 03" loading="lazy" onclick="openLightbox(this)"></td>
-                        </tr></table>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Core Contributions Overview -->
-    <section style="margin-top:64px;">
-        <h2 class="section-title"><span class="icon">📌</span> Core Contributions at a Glance</h2>
-        <p class="section-desc">Representative work outputs and team contributions during my time at Cloudwise.</p>
-        <div class="contrib-grid">
-            <div class="contrib-card">
-                <h3>🎯 Solution Deliverables</h3>
-                <ul class="contrib-list">
-                    <li><span class="year">2025</span> DOOP 6.5.1 Transaction Analytics & LLM Observability</li>
-                    <li><span class="year">2025</span> Cloudwise Ops LLM Solution</li>
-                    <li><span class="year">2024</span> DX Telco Centralized O&M Platform</li>
-                    <li><span class="year">2024</span> Channel Partner Cloudwise O&M Product Intro</li>
-                    <li><span class="year">2023</span> Civil Aviation AIOps Solution</li>
-                </ul>
-            </div>
-            <div class="contrib-card">
-                <h3>📚 Team Enablement Library</h3>
-                <ul class="contrib-list">
-                    <li><span class="year">2024</span> Airport Industry Proposal & Telco Insights Docs</li>
-                    <li><span class="year">2024</span> QY Infrastructure Monitoring Docs (Install/Deploy/Ops)</li>
-                    <li><span class="year">2024</span> Hera Log Analysis PoC Test Plan (Part 1 & 2)</li>
-                    <li><span class="year">2024</span> AIOps Maturity Certification Framework</li>
-                    <li><span class="year">2024</span> DX Telco Project Proposal Call-High Materials</li>
-                </ul>
-            </div>
-            <div class="contrib-card">
-                <h3>🎤 Internal Training & Sharing</h3>
-                <ul class="contrib-list">
-                    <li><span class="year">2025</span> DOAU Automation Hands-on Sharing</li>
-                    <li><span class="year">2025</span> Presales "Ammo Depot" Drill (Part 3)</li>
-                    <li><span class="year">2024</span> Telco Algorithm Use Cases Sharing</li>
-                    <li><span class="year">2024</span> AIOps Maturity Assessment Framework Sharing</li>
-                    <li><span class="year">2023</span> Shanghai HQ Airport Iron Triangle Case Study</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-</main>
-
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
-    <img id="lightbox-img" src="" alt="">
-</div>
-
-<div class="cta-bar">
-    <a href="https://jaden.tech" class="cta-primary">Visit Personal Site</a>
-    <a href="https://cloudwise.com" class="cta-secondary">About Cloudwise</a>
-</div>
-
-<!-- Agent Flow Diagram -->
-<footer class="footer" style="padding-top:0;">
-    <svg class="agent-flow" viewBox="0 0 620 200" role="img" aria-label="Agent collaboration flow diagram" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-            <marker id="ah-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#4A9EFF"/></marker>
-            <marker id="ah-cyan" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#00D4AA"/></marker>
-            <marker id="ah-gold" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#FFB400"/></marker>
-        </defs>
-
-        <!-- Top: TRAE → Hermes (counterclockwise, upper U) — cyan -->
-        <path d="M440,80 L440,68 L280,68 L280,80" stroke="#00D4AA" stroke-width="1.5" fill="none" marker-end="url(#ah-cyan)"/>
-
-        <!-- Bottom: Hermes → TRAE (counterclockwise, lower U) — blue -->
-        <path d="M280,100 L280,118 L440,118 L440,100" stroke="#4A9EFF" stroke-width="1.5" fill="none" marker-end="url(#ah-blue)"/>
-
-        <!-- OpenClaw ↔ Hermes (U below, no arrow) — gold -->
-        <path d="M120,100 L120,118 L280,118 L280,100" stroke="#FFB400" stroke-width="1.5" fill="none"/>
-
-        <!-- Nested U between the two bottom U-lines, arrow pointing right — gold -->
-        <path d="M200,118 L200,136 L360,136 L360,118" stroke="#FFB400" stroke-width="1.5" fill="none" marker-end="url(#ah-gold)"/>
-
-        <!-- Nodes & Labels -->
-        <!-- OpenClaw -->
-        <circle cx="120" cy="90" r="10" fill="#0A0A2A" stroke="#FFB400" stroke-width="2"/>
-        <text x="120" y="112" text-anchor="middle" fill="#FFB400" font-size="12" font-weight="600">OpenClaw</text>
-        <text x="200" y="110" text-anchor="middle" fill="#5555aa" font-size="12">Generated</text>
-
-        <!-- Hermes -->
-        <circle cx="280" cy="90" r="10" fill="#0A0A2A" stroke="#4A9EFF" stroke-width="2"/>
-        <text x="280" y="112" text-anchor="middle" fill="#e8e8f8" font-size="12" font-weight="600">Hermes</text>
-        <text x="360" y="110" text-anchor="middle" fill="#5555aa" font-size="12">Reviewed</text>
-
-        <!-- TRAE -->
-        <circle cx="440" cy="90" r="10" fill="#0A0A2A" stroke="#00D4AA" stroke-width="2"/>
-        <text x="440" y="112" text-anchor="middle" fill="#00D4AA" font-size="12" font-weight="600">TRAE</text>
-        <text x="360" y="60" text-anchor="middle" fill="#5555aa" font-size="12">Polished</text>
-    </svg>
-</footer>
-
-<script>
-/* Browser language label */
-(function(){
-    var bl = (navigator.language || navigator.userLanguage || '').toLowerCase();
-    var isZh = bl.indexOf('zh') === 0;
-    var el = document.getElementById('browser-lang');
-    if(el) el.textContent = isZh ? '中文' : 'English';
-})();
-
-function toggleImg(btn){const c=btn.closest('.card'),d=c.querySelector('.card-image');if(!d)return;const x=d.classList.toggle('expanded');btn.classList.toggle('active',x)}
-function openLightbox(el){const lb=document.getElementById('lightbox');document.getElementById('lightbox-img').src=el.src;lb.classList.add('active');document.body.style.overflow='hidden'}
-function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow=''}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
-
-/* #3 Lightbox touch: swipe-down to close */
-(function(){
-    const lb=document.getElementById('lightbox');
-    let startY=0,dragging=false;
-    lb.addEventListener('touchstart',e=>{
-        if(e.touches.length!==1)return;
-        startY=e.touches[0].clientY;dragging=true;
-    },{passive:true});
-    lb.addEventListener('touchmove',e=>{
-        if(!dragging)return;
-        if(e.touches[0].clientY-startY>60){closeLightbox();dragging=false;}
-    },{passive:true});
-    lb.addEventListener('touchend',()=>{dragging=false;},{passive:true});
-})();
-
-/* #5 Timeline: animate only when visible via IntersectionObserver */
-(function(){
-    const items=document.querySelectorAll('.timeline-item');
-    if(!items.length)return;
-    items.forEach(i=>{i.style.opacity='0';i.style.transform='translateY(16px)';i.style.animation='none';});
-    const io=new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-            if(e.isIntersecting){
-                const el=e.target;
-                el.style.transition='opacity 0.5s ease, transform 0.5s ease';
-                el.style.opacity='1';
-                el.style.transform='translateY(0)';
-                io.unobserve(el);
-            }
-        });
-    },{threshold:0.15});
-    items.forEach(i=>io.observe(i));
-})();
-
-
-</script>
-</body>
-</html>
